@@ -2,15 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lumishop - Venta de Lentes</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo">LUMISHOP</div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
       <ul class="nav-links">
         <li><a href="#catalogo">Catálogo</a></li>
         <li><a href="#ofertas">Ofertas</a></li>
@@ -26,7 +30,7 @@
     <section class="hero">
       <h1>Lentes que combinan con tu estilo</h1>
       <p>Moda, comodidad y tecnología óptica en un solo lugar.</p>
-      <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+      <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
     </section>
 
     <section id="catalogo" class="catalogo container">
@@ -100,6 +104,11 @@
   <footer>
     <p>&copy; 2025 Lumishop. Todos los derechos reservados.</p>
   </footer>
-  <a href="https://wa.me/53456789012" class="whatsapp-btn" target="_blank" rel="noopener">💬</a>
+  
+  <a href="https://wa.me/53456789012" class="whatsapp-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
 </body>
-</html>
+            </html>
