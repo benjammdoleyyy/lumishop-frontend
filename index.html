@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumishop - Venta de Lentes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">LUMISHOP</div>
+      <ul class="nav-links">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#ofertas">Ofertas</a></li>
+        <li><a href="test-visual.html">Test Visual</a></li>
+        <li><a href="reseñas.html">Reseñas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" class="btn-login">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Lentes que combinan con tu estilo</h1>
+      <p>Moda, comodidad y tecnología óptica en un solo lugar.</p>
+      <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+    </section>
+
+    <section id="catalogo" class="catalogo container">
+      <h2>Catálogo</h2>
+      <div class="filtros">
+        <select>
+          <option>Género</option>
+          <option>Unisex</option>
+          <option>Hombre</option>
+          <option>Mujer</option>
+        </select>
+        <select>
+          <option>Tipo</option>
+          <option>De Sol</option>
+          <option>Graduados</option>
+          <option>Moda</option>
+        </select>
+        <select>
+          <option>Precio</option>
+          <option>- $50</option>
+          <option>$50 - $100</option>
+          <option>+ $100</option>
+        </select>
+      </div>
+      <div class="productos">
+        <div class="producto card">
+          <div class="producto-img-container">
+            <img src="img/lente1.jpg" alt="Lente Clásico" />
+          </div>
+          <div class="card-content">
+            <h3>Lente Clásico</h3>
+            <p>$59.99</p>
+            <button class="btn-comprar">Agregar al Carrito</button>
+          </div>
+        </div>
+        <div class="producto card">
+          <div class="producto-img-container">
+            <img src="img/lente2.jpg" alt="Lente Moderno" />
+          </div>
+          <div class="card-content">
+            <h3>Lente Moderno</h3>
+            <p>$79.99</p>
+            <button class="btn-comprar">Agregar al Carrito</button>
+          </div>
+        </div>
+        <div class="producto card">
+          <div class="producto-img-container">
+            <img src="img/lente3.jpg" alt="Lente Deportivo" />
+          </div>
+          <div class="card-content">
+            <h3>Lente Deportivo</h3>
+            <p>$69.99</p>
+            <button class="btn-comprar">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ofertas" class="ofertas container">
+      <h2>Ofertas del Día</h2>
+      <div class="oferta card">
+        <img src="img/oferta.jpg" alt="Oferta especial" />
+        <div class="card-content">
+          <h3>50% en Lentes de Sol</h3>
+          <p>¡Sólo por hoy!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lumishop. Todos los derechos reservados.</p>
+  </footer>
+  <a href="https://wa.me/53456789012" class="whatsapp-btn" target="_blank" rel="noopener">💬</a>
+</body>
+</html>
