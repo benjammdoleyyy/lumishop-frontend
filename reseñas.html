@@ -2,15 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reseñas - Lumishop</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo">LUMISHOP</div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
       <ul class="nav-links">
         <li><a href="index.html#catalogo">Catálogo</a></li>
         <li><a href="index.html#ofertas">Ofertas</a></li>
@@ -22,28 +26,86 @@
     </nav>
   </header>
 
-  <main>
-    <section class="reseñas container">
-      <h2>Reseñas de Clientes</h2>
-      <div class="testimonio card">
-        <p>“Excelentes lentes, llegaron rápido y se sienten de calidad.”</p>
-        <span>- María G.</span>
+  <main class="centered-container">
+    <div class="container">
+      <div class="rating-summary text-center">
+        <h2>Valoraciones de Clientes</h2>
+        <div class="overall-rating">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="rating-text">4.5 basado en 128 reseñas</p>
+        </div>
       </div>
-      <div class="testimonio card">
-        <p>“Probé el test visual y acertaron con el modelo que necesitaba.”</p>
-        <span>- Jorge P.</span>
+
+      <div class="text-center" style="margin: 2rem 0;">
+        <a href="nueva-reseña.html" class="btn btn-secondary">Escribir Reseña</a>
       </div>
-      
-      <!-- Botón para agregar reseña (visible solo para usuarios que hayan comprado) -->
-      <div class="agregar-reseña">
-        <button class="btn-secundario">Agregar tu reseña</button>
+
+      <div class="reviews-container">
+        <!-- Reseña de ejemplo 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <span class="review-author">Carlos M.</span>
+            <span class="review-date">15/03/2024</span>
+          </div>
+          <div class="review-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Los lentes son exactamente como se describen. Muy buena calidad y llegaron antes de lo esperado. ¡Recomendado!"</p>
+        </div>
+
+        <!-- Reseña de ejemplo 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <span class="review-author">Ana L.</span>
+            <span class="review-date">10/03/2024</span>
+          </div>
+          <div class="review-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p class="review-text">"Buena relación calidad-precio. El envío fue rápido aunque la caja llegó un poco golpeada. Los lentes están perfectos."</p>
+        </div>
+
+        <!-- Reseña de ejemplo 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <span class="review-author">Javier R.</span>
+            <span class="review-date">05/03/2024</span>
+          </div>
+          <div class="review-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Excelente servicio al cliente. Me ayudaron a elegir el modelo perfecto para mi graduación. Los uso diariamente y son muy cómodos."</p>
+        </div>
       </div>
-    </section>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="nueva-reseña.html" class="btn btn-secondary">Escribir tu Reseña</a>
+      </div>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Lumishop. Todos los derechos reservados.</p>
   </footer>
-  <a href="https://wa.me/53456789012" class="whatsapp-btn" target="_blank" rel="noopener">💬</a>
+
+  <script src="script.js"></script>
 </body>
-</html>
+            </html>
