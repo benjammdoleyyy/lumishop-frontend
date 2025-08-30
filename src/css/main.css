@@ -1,3 +1,6 @@
+/* Import additional stylesheets */
+@import url('components.css');
+
 /* Reset y estilos globales optimizados */
 * {
   margin: 0;
