@@ -42,7 +42,7 @@ header {
   margin: 0 auto;
 }
 
-.logo {
+.logo a {
   font-weight: 700;
   font-size: 1.5rem;
   color: #3498db;
