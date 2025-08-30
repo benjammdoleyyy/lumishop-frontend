@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lente Clásico - Lumishop</title>
+  <meta name="description" content="Lente Clásico elegante y cómodo. Calidad premium con diseño atemporal. Envío gratis en pedidos superiores a $100.">
+  <link rel="stylesheet" href="src/css/main.css" />
+  <link rel="stylesheet" href="src/css/components.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">LUMISHOP</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#catalogo">Catálogo</a></li>
+        <li><a href="index.html#ofertas">Ofertas</a></li>
+        <li><a href="test-visual.html">Test Visual</a></li>
+        <li><a href="reseñas.html">Reseñas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <!-- Cart icon will be added by JavaScript -->
+        <li><a href="login.html" class="btn-login">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Breadcrumb Navigation -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#catalogo">Catálogo</a></li>
+          <li><span aria-current="page">Lente Clásico</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Product Details Section -->
+    <section class="product-details container">
+      <div class="product-layout">
+        <!-- Product Images -->
+        <div class="product-images">
+          <div class="main-image">
+            <img id="main-product-image" src="src/images/lente1.jpg" alt="Lente Clásico - Vista principal" class="main-img">
+            <button class="image-zoom-btn" title="Ampliar imagen">
+              <i class="fas fa-search-plus"></i>
+            </button>
+          </div>
+          <div class="thumbnail-gallery">
+            <button class="thumbnail active" data-image="src/images/lente1.jpg" data-alt="Vista principal">
+              <img src="src/images/lente1.jpg" alt="Vista principal">
+            </button>
+            <button class="thumbnail" data-image="src/images/lente2.jpg" data-alt="Vista lateral">
+              <img src="src/images/lente2.jpg" alt="Vista lateral">
+            </button>
+            <button class="thumbnail" data-image="src/images/lente3.jpg" data-alt="Vista frontal">
+              <img src="src/images/lente3.jpg" alt="Vista frontal">
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Information -->
+        <div class="product-info">
+          <div class="product-header">
+            <h1 class="product-title">Lente Clásico</h1>
+            <div class="product-rating">
+              <div class="stars">
+                ★★★★★
+              </div>
+              <span class="rating-count">(124 reseñas)</span>
+              <a href="#reviews" class="rating-link">Ver reseñas</a>
+            </div>
+            <div class="product-price">
+              <span class="current-price">$59.99</span>
+              <span class="original-price">$79.99</span>
+              <span class="discount-badge">25% OFF</span>
+            </div>
+          </div>
+
+          <div class="product-description">
+            <h3>Descripción</h3>
+            <p>Lentes clásicos con diseño atemporal que combina elegancia y comodidad. Fabricados con materiales de alta calidad para un uso duradero y cómodo durante todo el día.</p>
+            
+            <ul class="product-features">
+              <li><i class="fas fa-check"></i> Montura ligera y resistente</li>
+              <li><i class="fas fa-check"></i> Lentes con protección UV</li>
+              <li><i class="fas fa-check"></i> Diseño unisex</li>
+              <li><i class="fas fa-check"></i> Incluye estuche protector</li>
+              <li><i class="fas fa-check"></i> Garantía de 2 años</li>
+            </ul>
+          </div>
+
+          <div class="product-options">
+            <div class="option-group">
+              <label for="color-select">Color:</label>
+              <div class="color-options">
+                <input type="radio" id="black" name="color" value="negro" checked>
+                <label for="black" class="color-option black" title="Negro"></label>
+                
+                <input type="radio" id="brown" name="color" value="marron">
+                <label for="brown" class="color-option brown" title="Marrón"></label>
+                
+                <input type="radio" id="gray" name="color" value="gris">
+                <label for="gray" class="color-option gray" title="Gris"></label>
+              </div>
+            </div>
+
+            <div class="option-group">
+              <label for="size-select">Tamaño:</label>
+              <select id="size-select" class="size-select">
+                <option value="s">Pequeño (S)</option>
+                <option value="m" selected>Mediano (M)</option>
+                <option value="l">Grande (L)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <div class="quantity-selector">
+              <label for="quantity">Cantidad:</label>
+              <div class="quantity-controls">
+                <button type="button" class="qty-btn minus" data-action="decrease">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <input type="number" id="quantity" value="1" min="1" max="10" class="qty-input">
+                <button type="button" class="qty-btn plus" data-action="increase">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn-primary btn-add-cart" data-product-id="1">
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al Carrito
+              </button>
+              <button class="btn-secondary btn-buy-now">
+                <i class="fas fa-bolt"></i>
+                Comprar Ahora
+              </button>
+              <button class="btn-wishlist" title="Agregar a favoritos">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-info-tabs">
+            <div class="tab-buttons">
+              <button class="tab-btn active" data-tab="specs">Especificaciones</button>
+              <button class="tab-btn" data-tab="shipping">Envío</button>
+              <button class="tab-btn" data-tab="returns">Devoluciones</button>
+            </div>
+
+            <div class="tab-content">
+              <div class="tab-panel active" id="specs">
+                <table class="specs-table">
+                  <tr>
+                    <td>Material de la montura</td>
+                    <td>Acetato premium</td>
+                  </tr>
+                  <tr>
+                    <td>Tipo de lente</td>
+                    <td>CR-39 con protección UV</td>
+                  </tr>
+                  <tr>
+                    <td>Ancho del lente</td>
+                    <td>52mm</td>
+                  </tr>
+                  <tr>
+                    <td>Puente</td>
+                    <td>18mm</td>
+                  </tr>
+                  <tr>
+                    <td>Varilla</td>
+                    <td>140mm</td>
+                  </tr>
+                  <tr>
+                    <td>Peso</td>
+                    <td>28g</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="tab-panel" id="shipping">
+                <div class="shipping-info">
+                  <div class="shipping-option">
+                    <i class="fas fa-truck"></i>
+                    <div>
+                      <h4>Envío estándar</h4>
+                      <p>3-5 días hábiles • $10.00</p>
+                    </div>
+                  </div>
+                  <div class="shipping-option">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div>
+                      <h4>Envío express</h4>
+                      <p>1-2 días hábiles • $20.00</p>
+                    </div>
+                  </div>
+                  <div class="shipping-option free">
+                    <i class="fas fa-gift"></i>
+                    <div>
+                      <h4>Envío gratis</h4>
+                      <p>En compras superiores a $100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-panel" id="returns">
+                <div class="returns-info">
+                  <h4><i class="fas fa-undo"></i> Política de devoluciones</h4>
+                  <ul>
+                    <li>30 días para devoluciones</li>
+                    <li>Producto en condiciones originales</li>
+                    <li>Reembolso completo garantizado</li>
+                    <li>Etiqueta de envío gratuita incluida</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products container">
+      <h2>Productos Relacionados</h2>
+      <div class="products-grid">
+        <div class="producto">
+          <div class="producto-img-container">
+            <img src="src/images/lente2.jpg" alt="Lente Moderno">
+          </div>
+          <div class="card-content">
+            <h3>Lente Moderno</h3>
+            <div class="product-rating">
+              ★★★☆☆ <span>(3/5)</span>
+            </div>
+            <p>$79.99</p>
+            <button class="btn-comprar">Agregar al Carrito</button>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto-img-container">
+            <img src="src/images/lente3.jpg" alt="Lente Deportivo">
+            <span class="product-badge featured">Destacado</span>
+          </div>
+          <div class="card-content">
+            <h3>Lente Deportivo</h3>
+            <div class="product-rating">
+              ★★☆☆☆ <span>(2/5)</span>
+            </div>
+            <p>$69.99</p>
+            <button class="btn-comprar">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews container" id="reviews">
+      <h2>Reseñas de Clientes</h2>
+      <div class="reviews-summary">
+        <div class="rating-overview">
+          <div class="average-rating">
+            <span class="rating-number">4.8</span>
+            <div class="stars-large">★★★★★</div>
+            <p>Basado en 124 reseñas</p>
+          </div>
+          <div class="rating-breakdown">
+            <div class="rating-bar">
+              <span>5★</span>
+              <div class="bar"><div class="fill" style="width: 80%"></div></div>
+              <span>100</span>
+            </div>
+            <div class="rating-bar">
+              <span>4★</span>
+              <div class="bar"><div class="fill" style="width: 15%"></div></div>
+              <span>19</span>
+            </div>
+            <div class="rating-bar">
+              <span>3★</span>
+              <div class="bar"><div class="fill" style="width: 3%"></div></div>
+              <span>4</span>
+            </div>
+            <div class="rating-bar">
+              <span>2★</span>
+              <div class="bar"><div class="fill" style="width: 1%"></div></div>
+              <span>1</span>
+            </div>
+            <div class="rating-bar">
+              <span>1★</span>
+              <div class="bar"><div class="fill" style="width: 0%"></div></div>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-list">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">M</div>
+              <div>
+                <h4>María González</h4>
+                <div class="review-stars">★★★★★</div>
+              </div>
+            </div>
+            <span class="review-date">15 Dic 2024</span>
+          </div>
+          <p class="review-text">Excelente calidad y muy cómodos. Los uso todos los días y se sienten perfectos. El diseño es elegante y van con todo.</p>
+          <div class="review-helpful">
+            <button class="helpful-btn">
+              <i class="fas fa-thumbs-up"></i> Útil (12)
+            </button>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">C</div>
+              <div>
+                <h4>Carlos Ruiz</h4>
+                <div class="review-stars">★★★★☆</div>
+              </div>
+            </div>
+            <span class="review-date">10 Dic 2024</span>
+          </div>
+          <p class="review-text">Buena relación calidad-precio. La entrega fue rápida y el empaque muy cuidado. Recomendado.</p>
+          <div class="review-helpful">
+            <button class="helpful-btn">
+              <i class="fas fa-thumbs-up"></i> Útil (8)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-secondary load-more-reviews">Ver más reseñas</button>
+        <a href="nueva-reseña.html" class="btn btn-primary">Escribir reseña</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lumishop. Todos los derechos reservados.</p>
+  </footer>
+  
+  <a href="https://wa.me/53456789012" class="whatsapp-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="src/js/cart.js"></script>
+  <script src="src/js/filters.js"></script>
+  <script src="src/js/ui-enhancements.js"></script>
+  <script src="src/js/product-page.js"></script>
+  <script src="src/js/app.js"></script>
+</body>
+</html>

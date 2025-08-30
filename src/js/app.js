@@ -1,5 +1,16 @@
-// Menú responsive
+// Menú responsive y funcionalidad principal
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize shopping cart
+  window.cart = new ShoppingCart();
+  
+  // Initialize UI enhancements
+  window.uiEnhancements = new UIEnhancements();
+  
+  // Initialize catalog filtering (only on pages with catalog)
+  if (document.querySelector('.catalogo')) {
+    window.catalogFilter = new CatalogFilter();
+  }
+  
   // Toggle del menú móvil
   const menuToggle = document.querySelector('.menu-toggle');
   if(menuToggle) {
