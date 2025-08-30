@@ -1,5 +1,7 @@
 /* Import additional stylesheets */
 @import url('components.css');
+@import url('animations.css');
+@import url('responsive.css');
 
 /* Reset y estilos globales optimizados */
 * {
@@ -16,6 +18,7 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Navegación mejorada para móviles */
@@ -26,6 +29,8 @@ header {
   top: 0;
   z-index: 1000;
   padding: 0.5rem 1rem;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar {
@@ -33,12 +38,16 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
   font-weight: 700;
   font-size: 1.5rem;
   color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .menu-toggle {
@@ -77,7 +86,7 @@ header {
 
 /* Hero Section optimizada */
 .hero {
-  background: url('img/hero-lentes.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 70vh;
   display: flex;
   flex-direction: column;
@@ -85,8 +94,9 @@ header {
   align-items: center;
   text-align: center;
   color: white;
-  padding: 2rem 1rem;
+  padding: 5rem 2rem;
   position: relative;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -96,23 +106,43 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: url('../images/hero-lentes.jpg') center/cover;
+  opacity: 0.2;
+  z-index: 1;
 }
 
 .hero > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: slideInDown 1s ease-out;
 }
 
 .hero p {
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   margin-bottom: 2rem;
   max-width: 600px;
+  opacity: 0.95;
+  animation: slideInUp 1s ease-out 0.3s both;
+}
+
+.hero .btn {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  animation: fadeIn 1s ease-out 0.6s both;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Contenedores centrados */
@@ -195,6 +225,251 @@ textarea {
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Catálogo modernizado */
+.catalogo {
+  padding: 4rem 0;
+  background: white;
+}
+
+.catalogo h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+  animation: slideInDown 0.8s ease-out;
+}
+
+.catalogo h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+/* Filtros modernizados */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.filtros select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.filtros select:hover,
+.filtros select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Grid de productos modernizado */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .productos {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .productos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Tarjetas de producto modernizadas */
+.producto {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  animation: fadeIn 0.8s ease-out;
+  transform: translateY(0);
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.producto-img-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: #f8f9fa;
+}
+
+.producto-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover .producto-img-container img {
+  transform: scale(1.1);
+}
+
+.producto-img-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.producto:hover .producto-img-container::before {
+  opacity: 1;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.btn-comprar {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-comprar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-comprar:hover::before {
+  left: 100%;
+}
+
+.btn-comprar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.btn-comprar:active {
+  transform: translateY(0);
+}
+
+/* Ofertas section */
+.ofertas {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.ofertas h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.oferta {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.oferta img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.oferta:hover img {
+  transform: scale(1.05);
+}
+
+/* Animaciones escalonadas para productos */
+.productos.stagger-animation .producto:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.productos.stagger-animation .producto:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.productos.stagger-animation .producto:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.productos.stagger-animation .producto:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.productos.stagger-animation .producto:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.productos.stagger-animation .producto:nth-child(6) {
+  animation-delay: 0.6s;
 }
 
 .review-header {
